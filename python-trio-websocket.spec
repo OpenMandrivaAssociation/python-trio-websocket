@@ -33,3 +33,5 @@ Suite.}
 %files
 %doc README.md
 %license LICENSE
+%{python_sitelib}/trio_websocket-%{version}-py*.*.egg-info
+%{python_sitelib}/trio_websocket/
