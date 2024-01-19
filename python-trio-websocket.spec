@@ -13,6 +13,9 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(wheel)
 BuildRequires:  python3dist(pip)
 
+Requires:  python-trio
+Requires:  python-wsproto
+
 %description
 This library implements both server and client aspects of the the WebSocket
 protocol, striving for safety, correctness, and ergonomics. It is based on the
