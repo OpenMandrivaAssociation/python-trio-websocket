@@ -3,7 +3,7 @@
 
 Name:           python-trio-websocket
 Version:        0.12.2
-Release:        1
+Release:        2
 Summary:        WebSocket library for Trio
 Group:          Development/Python
 License:        MIT
@@ -11,9 +11,11 @@ URL:            https://github.com/python-trio/trio-websocket
 Source:         https://files.pythonhosted.org/packages/source/t/trio-websocket/%{uname}-%{version}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  pkgconfig(python3)
+BuildSystem:    python
+
 BuildRequires:  python%{pyver}dist(wheel)
 BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(setuptools)
 
 Requires:  python%{pyver}dist(trio)
 Requires:  python%{pyver}dist(wsproto)
@@ -26,15 +28,6 @@ wsproto project, which is a Sans-IO state machine that implements the majority
 of the WebSocket protocol, including framing, codecs, and events. This library
 handles I/O using the Trio framework. This library passes the Autobahn Test
 Suite.}
-
-%prep
-%autosetup -p1 -n %{uname}-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
 
 %files
 %{python_sitelib}/%{uname}-%{version}.dist-info
