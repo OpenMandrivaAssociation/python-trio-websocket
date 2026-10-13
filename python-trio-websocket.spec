@@ -3,7 +3,7 @@
 
 Name:           python-trio-websocket
 Version:        0.12.2
-Release:        2
+Release:        3
 Summary:        WebSocket library for Trio
 Group:          Development/Python
 License:        MIT
